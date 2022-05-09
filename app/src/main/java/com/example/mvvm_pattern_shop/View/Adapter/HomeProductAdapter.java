@@ -12,17 +12,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.mvvm_pattern_shop.R;
-import com.example.mvvm_pattern_shop.Service.Model.Product;
-import com.example.mvvm_pattern_shop.Service.Model.ProductModel;
+import com.example.mvvm_pattern_shop.Service.Model.FakeProducts;
 
 import java.util.List;
 
 public class HomeProductAdapter extends  RecyclerView.Adapter<HomeProductAdapter.MyViewHolder> {
 
     private Context context;
-    private List<Product> mList;
+    private List<FakeProducts> mList;
 
-    public HomeProductAdapter(Context context, List<Product> mList) {
+    public HomeProductAdapter(Context context, List<FakeProducts> mList) {
         this.context = context;
         this.mList = mList;
     }
@@ -41,10 +40,10 @@ public class HomeProductAdapter extends  RecyclerView.Adapter<HomeProductAdapter
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         holder.mDescription.setText(mList.get(position).getDescription());
-        holder.mTitle.setText(mList.get(position).getName());
-        holder.mPrice.setText(mList.get(position).getPrice());
-//        Glide.with(context).load(mList.get(position).getImagePublicId()).into(holder.imageView);
-        Glide.with(context).load("https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmVhdXR5JTIwcHJvZHVjdHN8ZW58MHx8MHx8&w=1000&q=80").into(holder.imageView);
+        holder.mTitle.setText(mList.get(position).getTitle());
+        holder.mPrice.setText(mList.get(position).getPrice().toString());
+        Glide.with(context).load(mList.get(position).getImage()).into(holder.imageView);
+//        Glide.with(context).load("https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmVhdXR5JTIwcHJvZHVjdHN8ZW58MHx8MHx8&w=1000&q=80").into(holder.imageView);
 
 
 

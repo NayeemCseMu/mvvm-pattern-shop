@@ -4,7 +4,7 @@ package com.example.mvvm_pattern_shop.Service.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class ProductModel {
+public class FakeProducts {
 
         @SerializedName("id")
         @Expose

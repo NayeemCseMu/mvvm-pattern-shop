@@ -1,17 +1,14 @@
-package com.example.mvvm_pattern_shop;
+package com.example.mvvm_pattern_shop.View.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.LinearLayout;
 
-import com.example.mvvm_pattern_shop.Service.Model.Product;
-import com.example.mvvm_pattern_shop.Service.Model.ProductModel;
+import com.example.mvvm_pattern_shop.R;
+import com.example.mvvm_pattern_shop.Service.Model.FakeProducts;
 import com.example.mvvm_pattern_shop.View.Adapter.HomeProductAdapter;
 import com.example.mvvm_pattern_shop.ViewModel.ProductViewModel;
 
@@ -24,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ProductViewModel viewModel;
     private HomeProductAdapter adapter;
-    private List<Product> products = new ArrayList<>();
+    private List<FakeProducts> products = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
